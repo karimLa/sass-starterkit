@@ -1,0 +1,29 @@
+// MEDIA QUERY MANAGER
+
+/*
+
+0 - 600px     :  (phone)  Phone
+600 - 900px   :  (tp)     Tab Portriat
+900 -1200px   :  (tl)     Tablet Landscape
+[1200 - 1800] :  base     Normal styles
+1800px +      :  (bd)     Big Desktop
+
+*/
+
+@mixin mq($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) { @content }; // 600px
+  }
+
+  @if $breakpoint == tp {
+    @media only screen and (max-width: 56.25em) { @content }; // 900px
+  }
+
+  @if $breakpoint == tl {
+    @media only screen and (max-width: 75em) { @content }; // 1200px
+  }
+
+  @if $breakpoint == bd {
+    @media only screen and (min-width: 112.5em) { @content }; // 1800px
+  }
+}
