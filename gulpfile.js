@@ -2,14 +2,14 @@ const { src, dest, watch } = require('gulp')
 const browserSync = require('browser-sync').create()
 const sass = require('gulp-sass')
 const postcss = require('gulp-postcss')
-const cssnext = require('postcss-cssnext')
+const postcssPresetEnv = require('postcss-preset-env')
 const cssnano = require('cssnano')
 const shortcss = require('postcss-short')
 
 function css() {
   const plugins = [
     shortcss,
-    cssnext({ browsers: '> 0.5%, last 4 versions, Firefox ESR' }),
+    postcssPresetEnv({ browsers: 'last 4 versions' }),
     cssnano
   ]
   return src('scss/main.scss')

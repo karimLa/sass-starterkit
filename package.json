@@ -13,11 +13,7 @@
     "gulp": "^4.0.0",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2",
-    "postcss-cssnext": "^3.1.0",
+    "postcss-preset-env": "^6.6.0",
     "postcss-short": "^5.0.0"
-  },
-  "dependencies": {
-    "global": "^4.3.2",
-    "gulp-cli": "^2.0.1"
   }
 }
